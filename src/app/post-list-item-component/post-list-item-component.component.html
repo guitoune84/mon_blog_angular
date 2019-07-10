@@ -1,0 +1,9 @@
+<li class="list-group-item mb-2" [ngClass]="{'list-group-item-success' : lovePost > 0, 'list-group-item-danger' : lovePost < 0}">
+    <span class="float-right">{{ datePost | date:'short' | uppercase }}</span>
+    <h3>{{ titlePost }}</h3>
+    <p>{{ contentPost }}</p>
+    <button class="btn btn-success mr-2" (click)="loveIts()"><i class="fas fa-thumbs-up mr-1"></i> Love It ! ({{ lovePost }})</button>
+    <button class="btn btn-danger" (click)="dontLoveIts()"><i class="fas fa-thumbs-down mr-1"></i> Don't love It !</button>
+
+    <button class="btn btn-danger float-right" (click)="deletePost()"><i class="fas fa-trash-alt mr-1"></i> Supprimer post !</button>
+</li>
